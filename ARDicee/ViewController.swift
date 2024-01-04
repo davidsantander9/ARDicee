@@ -20,17 +20,39 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        //sceneView.showsStatistics = true
+        
+        //let cube = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.01)
+        
+        let sphere = SCNSphere(radius: 0.2)
+        
+        let material = SCNMaterial()
+        
+        material.diffuse.contents = UIImage(named: "art.scnassets/moon.jpg")
+        
+        sphere.materials = [material]
+        
+        let node = SCNNode()
+        
+        node.position = SCNVector3(x: 0, y: 0.1, z: -0.5)
+        
+        node.geometry = sphere
+        
+        sceneView.scene.rootNode.addChildNode(node)
+        
+        sceneView.autoenablesDefaultLighting = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        //let scene = SCNScene(named: "art.scnassets/ship.scn")!
         
         // Set the scene to the view
-        sceneView.scene = scene
+        //sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+       
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()

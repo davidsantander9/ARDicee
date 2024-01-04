@@ -56,10 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				7651FF632B4495020011EF62 /* AppDelegate.swift */,
-				7651FF652B4495020011EF62 /* art.scnassets */,
 				7651FF672B4495020011EF62 /* ViewController.swift */,
 				7651FF692B4495020011EF62 /* Main.storyboard */,
 				7651FF6C2B4495030011EF62 /* Assets.xcassets */,
+				7651FF652B4495020011EF62 /* art.scnassets */,
 				7651FF6E2B4495030011EF62 /* LaunchScreen.storyboard */,
 			);
 			path = ARDicee;
